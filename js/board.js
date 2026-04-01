@@ -51,14 +51,20 @@ export function getStaticSegments() {
 
   // ── Slingshots ────────────────────────────────────────────────
   // Left slingshot (triangle, 3 segments)
-  seg(20,  340, 90,  260, { restitution: 1.1, isSlingshot: true, id: 'sl_left_top' });
-  seg(90,  260, 90,  370, { restitution: 1.1, isSlingshot: true, id: 'sl_left_bot' });
+  seg(20,  340, 90,  260, { restitution: 1.1, isSlingshot: true, id: 'sl_left_top',  flashTimer: 0 });
+  seg(90,  260, 90,  370, { restitution: 1.1, isSlingshot: true, id: 'sl_left_bot',  flashTimer: 0 });
   seg(20,  370, 90,  370, { restitution: 0.4 });
 
   // Right slingshot
-  seg(420, 340, 350, 260, { restitution: 1.1, isSlingshot: true, id: 'sl_right_top' });
-  seg(350, 260, 350, 370, { restitution: 1.1, isSlingshot: true, id: 'sl_right_bot' });
+  seg(420, 340, 350, 260, { restitution: 1.1, isSlingshot: true, id: 'sl_right_top', flashTimer: 0 });
+  seg(350, 260, 350, 370, { restitution: 1.1, isSlingshot: true, id: 'sl_right_bot', flashTimer: 0 });
   seg(420, 370, 350, 370, { restitution: 0.4 });
+
+  // ── Out-lane guide rails ───────────────────────────────────────
+  // Angled walls at the bottom of each out-lane that redirect the ball
+  // inward toward the flipper rather than straight into the drain.
+  seg(20,  680, 115, 740, { restitution: 0.6 });
+  seg(440, 680, 325, 740, { restitution: 0.6 });
 
   // ── Guide rails (gentle funnel above flippers) ────────────────
   seg(20,  600, 20,  620);

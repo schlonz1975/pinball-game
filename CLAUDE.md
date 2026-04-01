@@ -50,6 +50,18 @@ The game is a fixed-timestep 2D pinball simulation on a 480×900 HTML5 Canvas.
 | Right Arrow / X | Right flipper |
 | Space (hold/release) | Charge and launch plunger |
 
+## Git Workflow
+
+After every meaningful change, commit and push to GitHub:
+
+```bash
+git add <changed files>
+git commit -m "descriptive message"
+git push
+```
+
+Remote: `https://github.com/schlonz1975/pinball-game` (branch: `main`)
+
 ## Planned Milestones
 
 - **M1** ✅ Playable core — physics, flippers, bumpers, targets, scoring, 3-ball game
